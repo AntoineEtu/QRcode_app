@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Lecture de QR Code</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <button ion-button (click)="scan()">Scanner avec camera</button>
+  <button ion-button (click)="scan()" disabled=true>Scanner avec image</button>
+  <div>Scan à partir d'image non fonctionnel</div>
+</ion-content>

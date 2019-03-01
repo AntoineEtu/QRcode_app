@@ -1,0 +1,46 @@
+<!--
+  Generated template for the QrCodeHistoryPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Historique de génération</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item *ngFor="let string of qrList; index as i;">
+      <ion-card>
+        <ion-card-header>
+          Enrigistrement n°{{i}}
+        </ion-card-header>
+        <ion-card-content>
+          <ion-row>
+            <ion-col size="6">
+              {{string.text}}
+            </ion-col>
+            
+            <ion-col size="6">
+              <ion-item>Date et heure</ion-item>
+              <span>{{string.date}}</span>
+            </ion-col>
+          </ion-row>
+        </ion-card-content>
+      </ion-card>
+    </ion-item>
+  </ion-list>
+
+  <ion-row>
+    <ion-col *ngIf="noHistory">
+      Vous n'avez pas encore générer de QR code !
+    </ion-col>
+  </ion-row>
+
+</ion-content>
